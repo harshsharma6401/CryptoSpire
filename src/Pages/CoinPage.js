@@ -1,11 +1,14 @@
 import React from "react";
-const CoinPage = () =>{
+import { useParams } from "react-router-dom";
 
+const CoinPage = () =>{
+    const {id} = useParams();
+    
     return (
 
         <div>
 
-        Homepage
+        Coin Page
 
         </div>
 

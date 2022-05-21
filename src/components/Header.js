@@ -28,7 +28,8 @@ const darkTheme = createTheme({
             main: '#fff',
         },
         type: 'dark'
-    }
+    },
+
 });
 
 const Header = () => {
@@ -49,18 +50,30 @@ const Header = () => {
             <AppBar color='transparent' position='static' >
                 <Container>
                     <Toolbar>
-                        <Typography onClick={() => navigate("/")} variant="h6" className={classes.title}>Crypto Spire</Typography>
+                        <Typography onClick={() => navigate("/")} variant="h5" className={classes.title}
+                            sx={{
+                                flex: 1,
+                                color: "gold",
+                                fontFamily: "Montserrat",
+                                fontWeight: "bolder",
+                                cursor: "pointer",
+                            }}
+                        >Crypto Spire</Typography>
 
-                        <Select variant='outlined'
+                        <Select variant="outlined"
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+
                             style={{
                                 width: 100,
                                 height: 40,
                                 marginLeft: 15,
-
+                                color: 'primary'
                             }}
 
                             value={currency}
                             onChange={(e) => setCurrency(e.target.value)}
+
 
                         >
                             <MenuItem value={"USD"}> USD</MenuItem>
