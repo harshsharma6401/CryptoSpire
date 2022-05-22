@@ -52,23 +52,6 @@ const Coinstable = () => {
         }
     });
 
-    /* const useStyles = makeStyles((theme) => ({
-        row: {
-            backgroundColor: '#16171a',
-            cursor: 'pointer',
-            '&:hover': {
-                backgroundColor: '#131111',
-            },
-            fontFamily: 'Montserrat',
-        },
-    
-        pagination: {
-            '& .MuiPaginationItem-root': {
-                color: 'gold',
-            },
-        }
-    }));
- */
     const handleSearch = () => {
 
         return coins.filter((coin) =>
@@ -94,6 +77,7 @@ const Coinstable = () => {
                     sx={ {  input: { color: '#fff' }  }  }
                     style={{ marginBottom: 20, width: "100%" ,color: 'white' }}
                     onChange={(e) => setSearch(e.target.value)}
+                    
                 />
 
                 <TableContainer component  ={Paper}>
