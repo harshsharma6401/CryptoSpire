@@ -71,6 +71,19 @@ const CoinPage = () => {
       
     }));
 
+    const TypoText = styled('h5')(({ theme }) => ({
+
+        fontFamily: 'Montserrat' ,
+        fontWeight:'700',
+        paddingBottom: '15px',
+        fontSize:'1.5rem',
+        [theme.breakpoints.down("sm")]: {
+            fontSize:'1.3rem',
+          },
+
+    }));
+
+
     if(!coin) return   <LinearProgress style={{ backgroundColor: "gold" }} />
 
     return (
@@ -109,32 +122,32 @@ const CoinPage = () => {
                 <MarketData>
 
                     <span style={{ display: 'flex' }}>
-                        <Typography variant='h5' sx={{ fontFamily: 'Montserrat' ,fontWeight:'700',paddingBottom: '15px'}}>
+                        <TypoText >
                             Rank:{"  "}
                             {coin?.market_cap_rank}
                             &nbsp; &nbsp;
-                        </Typography>
+                        </TypoText>
                     </span>
 
                     <span style={{ display: 'flex' }}>
-                        <Typography variant='h5' sx={{ fontFamily: 'Montserrat',fontWeight:'700',paddingBottom: '15px' }}>
+                        <TypoText>
                             Current Price:{"  "}
                             {symbol}{" "}
                              {numberWithCommas(
                               coin?.market_data.current_price[currency.toLowerCase()]
                               )}
                             &nbsp; &nbsp;
-                        </Typography>
+                        </TypoText>
                     </span>
 
                     <span style={{ display: 'flex' }}>
-                        <Typography variant='h5' sx={{ fontFamily: 'Montserrat' ,fontWeight:'700',paddingBottom: '15px'}}>
+                        <TypoText>
                             Market Cap:{"   "}
                             {symbol}{" "}
                              {numberWithCommas(
                              coin?.market_data.market_cap[currency.toLowerCase()].toString().slice(0, -6)
                              )}{" "}M
-                        </Typography>
+                        </TypoText>
                     </span>
 
                 </MarketData>

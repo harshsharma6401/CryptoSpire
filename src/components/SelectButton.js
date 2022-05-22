@@ -21,8 +21,13 @@ const SelectButton = ({ children, selected, onClick }) => {
             color: "black",
         },
         width: "22%",
-        //   margin: 5,
-
+        [theme.breakpoints.down("sm")]: {
+            padding: 5,
+            paddingLeft: 10,
+            paddingRight: 10,
+            textAlign: 'center'
+          },  
+      
     }));
 
     return (
