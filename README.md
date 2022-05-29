@@ -16,7 +16,6 @@ The Homepage of the website has a carousel of some Popular cryptocurrencies depi
 ## Single Coin Page
 Upon clicking on any Cryptocurrency we are redirected to the coin page of that currency.
 The coinpage shows the rank,description and other basic details of the cryptocurrency. 
-It has 100+ cryptocurrencies sorted by their popularity displaying the information related to their Price, Market Cap, and Profit/Loss Percentage.
 You can view the graph of Price VS Time change of 24 Hours, 30 Days, 3 Months, and 1 Year in both currencies: INR and USD.
 The graphs for the price change are developed with the help of Chartjs.
 
